@@ -13,7 +13,11 @@
     <fieldset>
         <legend> BBDD </legend>
         <label>
-            Selecciona la base de dades que vols editar <input type="text" name="name" value="" required> 
+            Selecciona la base de dades que vols editar 
+            <select  
+            <br>
+            Introduiex aqui la sentencia SQL a executar:
+            <input type
         </label> 
         <br>
     </fieldset>
