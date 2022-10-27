@@ -14,10 +14,16 @@
         <legend> BBDD </legend>
         <label>
             Selecciona la base de dades que vols editar 
-            <select  
-            <br>
-            Introduiex aqui la sentencia SQL a executar:
-            <input type
+            
+            <select name="transporte">
+
+            <option value="1">Coche</option>
+
+            <option value="2">Avión</option>
+
+            <option value="3">Tren</option>
+
+            </select> 
         </label> 
         <br>
     </fieldset>
