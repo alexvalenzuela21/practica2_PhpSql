@@ -16,13 +16,13 @@
             Selecciona la base de dades que vols editar 
             
             <select name="transporte">
-
             <option value="1">Coche</option>
-
             <option value="2">Avión</option>
-
             <option value="3">Tren</option>
 
+            <br>
+
+            <Textarea></Textarea>
             </select> 
         </label> 
         <br>
