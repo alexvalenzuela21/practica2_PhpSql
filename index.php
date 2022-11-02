@@ -15,10 +15,13 @@
         <label>
             Selecciona la base de dades que vols editar 
             
-            <select name="transporte">
-            <option value="1">Coche</option>
-            <option value="2">Avión</option>
-            <option value="3">Tren</option>
+            <select>
+            <?php
+            while ($rowData = mysqli_fetch_array($databaseXampp)) {
+                echo '<option value="' . $rowData["schema_name"] . '">' . $rowData["schema_name"] . '</option>';
+            }
+            ?>
+            </select>
 
             <br>
 
