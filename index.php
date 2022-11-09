@@ -50,9 +50,9 @@
 <fieldset>
     <legend>Resultat de la Consulta</legend>
 <?php
-foreach ($result as $x => $x_value) {
-    echo "Key=" . $x . ", Value=" . $x_value;
-    echo "<br>";
-}
+// foreach ($result as $x => $x_value) {
+//     echo "Key=" . $x . ", Value=" . $x_value;
+//     echo "<br>";
+// }
 ?>
 </fieldset
