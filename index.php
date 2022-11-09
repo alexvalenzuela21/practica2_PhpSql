@@ -20,9 +20,8 @@
         <label>
             Selecciona la base de dades que vols editar 
             
-            <select name="bbdd" id="bbdd">
+            <select name="bbdd" id="bbdd" value = <?php print($mantenirBase); ?>>
             <?php
-
             while ($rowData = mysqli_fetch_array($databaseXampp)) {
                 echo '<option value="' . $rowData["schema_name"] . '">' . $rowData["schema_name"] . '</option>';
             }
@@ -35,7 +34,7 @@
             Intodueix la seguent sentencia SQL
             <br>
             <br>
-            <textarea id="consultar" name="consultar" rows="4" cols="70"> </textarea>
+            <textarea id="consultar" name="consultar" rows="4" cols="70"> <?php print_r($textConsulta) ?></textarea>
         </label> 
         <br>
         <br>
@@ -50,9 +49,19 @@
 <fieldset>
     <legend>Resultat de la Consulta</legend>
 <?php
-// foreach ($result as $x => $x_value) {
-//     echo "Key=" . $x . ", Value=" . $x_value;
-//     echo "<br>";
-// }
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    while ($fila = mysqli_fetch_assoc($result)) {
+        foreach ($fila as $key => $value) {
+             print_r("[" . $key . "] : " . $value);
+             print_r("<br>");
+        }
+    }
+}
+
 ?>
 </fieldset
+
+
+
