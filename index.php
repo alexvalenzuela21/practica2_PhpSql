@@ -52,11 +52,15 @@
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    while ($fila = mysqli_fetch_assoc($result)) {
-        foreach ($fila as $key => $value) {
-             print_r("[" . $key . "] : " . $value);
-             print_r("<br>");
+    if (str_contains($textConsulta, "SELECT")) {
+        while ($fila = mysqli_fetch_assoc($result)) {
+            foreach ($fila as $key => $value) {
+                 print_r("[" . $key . "] : " . $value);
+                 print_r("<br>");
+            }
         }
+    } else {
+        print("el teu codi s'ha executat");
     }
 }
 
